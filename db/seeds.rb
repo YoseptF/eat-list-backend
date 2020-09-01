@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+50.times do
+  Food.create(
+    name: Faker::Food.dish,
+    calories: rand(200..1000)
+  )
+end
+
+5.times do |i|
+  user = User.create(
+    email: Faker::Internet.email,
+    password: '123lol',
+    password_confirmation: '123lol'
+  )
+  rand(1..5).times do
+    
+  end
+end
