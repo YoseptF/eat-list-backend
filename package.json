@@ -1,5 +1,5 @@
 {
-  "name": "eat_list_backend",
+  "name": "my_eat_list_backend",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
