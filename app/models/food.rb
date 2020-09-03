@@ -8,6 +8,15 @@ class Food < ApplicationRecord
   validates :name, presence: true
   validates :calories, presence: true
 
+  def safe
+    {
+      id: id,
+      name: name,
+      calories: calories,
+      images: images
+    }
+  end
+
   def default_values
     images.create(alt: 'food image')
   end

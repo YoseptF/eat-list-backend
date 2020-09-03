@@ -18,8 +18,8 @@ class SessionsController < ApplicationController
 
   def logged_in
     render json: {
-      logged_in: !current_user.nil?,
-      user: current_user.safe
+      logged_in: current_user.present?,
+      user: current_user&.safe
     }.delete_if { |_key, value| value.nil? }, status: :ok
   end
 
