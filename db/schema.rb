@@ -49,6 +49,10 @@ ActiveRecord::Schema.define(version: 2020_08_31_223313) do
     t.string "email"
     t.string "password_digest"
     t.string "username", default: "anonymous"
+    t.integer "age", default: 27
+    t.integer "height", default: 175
+    t.decimal "weight", default: "98.0"
+    t.decimal "lifestyle", default: "1.2"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

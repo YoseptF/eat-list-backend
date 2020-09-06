@@ -1,18 +1,29 @@
 class FoodsController < ApplicationController
-  def create; end
+  def create
+    food = Food.new(food_params)
+
+    if food.save
+      render json: {
+        created: true,
+        food: food
+      }, status: :ok
+    else
+      render json: {
+        created: false,
+        reasons: food.errors.full_messages
+      }, status: :bad_request
+    end
+  end
 
   def index
-    page = (params['page'] || 1).to_i
-    size = (params['size'] || 10).to_i
-
-    food_slices = safe_food(Food.all, size)
-
-    render json: {
-      page: page,
-      totalPages: food_slices.length,
-      foods: food_slices[page - 1]
-    }, status: :ok
+    render :index, status: :ok
   end
 
   def show; end
+
+  private
+
+  def food_params
+    params.require(:food).permit(:name, :calories)
+  end
 end
