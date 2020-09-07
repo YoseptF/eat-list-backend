@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 2020_08_31_223313) do
 
   create_table "food_lists", force: :cascade do |t|
     t.integer "user_id"
+    t.decimal "current_water", default: "0.0"
+    t.decimal "current_sitting", default: "0.0"
+    t.decimal "current_sleep", default: "0.0"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -53,6 +56,9 @@ ActiveRecord::Schema.define(version: 2020_08_31_223313) do
     t.integer "height", default: 175
     t.decimal "weight", default: "98.0"
     t.decimal "lifestyle", default: "1.2"
+    t.decimal "daily_water", default: "2.0"
+    t.decimal "daily_sitting", default: "7.0"
+    t.decimal "daily_sleep", default: "7.0"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
