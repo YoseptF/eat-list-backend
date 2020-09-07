@@ -10,8 +10,8 @@ class FoodListsController < ApplicationController
   end
 
   def update_daily
-    success = current_user&.current_food_list&.update_attribute(
-      "current_#{params['type']}",
+    success = current_user&.current_food_list&.update(
+      "current_#{params['type']}":
       "#{params['int']}.#{params['dec']}".to_f
     )
     if success
