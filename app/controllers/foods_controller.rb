@@ -19,6 +19,22 @@ class FoodsController < ApplicationController
     render :index, status: :ok
   end
 
+  def update
+    success = Food.find(params['id'])&.update(food_params)
+
+    if success
+      render json: {
+        updated: true,
+        image: success
+      }, status: :ok
+    else
+      render json: {
+        updated: false,
+        message: 'id the id correct?'
+      }, status: :no_content
+    end
+  end
+
   def show; end
 
   private
