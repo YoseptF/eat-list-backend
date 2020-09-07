@@ -1,24 +1,50 @@
-# README
+# My Eat List Backed
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## The information source for [My eat list](https://github.com/YoseptF/my-eat-list-frontend)
 
-Things you may want to cover:
+![header](https://i.imgur.com/ZON2pOE.png)
 
-* Ruby version
+---
 
-* System dependencies
+With this app you can save a daily list of wht you eat from a list, and check your recomended calories based on height, age and weight.
+![relationships](https://i.imgur.com/UWwEHi9.png)
 
-* Configuration
+---
 
-* Database creation
+# Try it out!!
 
-* Database initialization
+You want to try it out without any installation? YOU CAN! Just check out the [live version](https://my-eat-list.netlify.app/).
 
-* How to run the test suite
+Just fire up [Postman](https://www.postman.com/) and make requests :D.
 
-* Services (job queues, cache servers, search engines, etc.)
+Although, give it a little time to fire up itself, it's hosted on a free heroku node, so it goes to sleep a lot <img src="https://i.imgur.com/3CUJMpz.png" width="50px">
 
-* Deployment instructions
+# Development Setup
 
-* ...
+Steps: 
+- Clone this repo:
+```
+$ git clone git@github.com:YoseptF/my-eat-list-backend.git
+```
+- Move to the lastest branch:
+```
+$ git checkout [branch name]
+```
+- Install the dependencies:
+```
+$ npm install
+```
+- Run the developer server: (this one is gonna be pretty important if you are running both front and backend, because by default rails and react try to use `localhost:3000`, so I configured the npm command to run this on `localhost:4000`)
+```
+$ npm start
+```
+
+And that's it. pretty easy uh?
+
+# Build with
+- [React](https://reactjs.org/)
+- [Netlify](https://app.netlify.com)
+- [Heroku](https://dashboard.heroku.com/apps)
+- [FontAwesome](https://fontawesome.com/)
+- Icons made by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+- Code from myself [Joseph Flores](https://github.com/YoseptF?tab=repositories)

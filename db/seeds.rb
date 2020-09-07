@@ -15,10 +15,17 @@ end
 5.times do |i|
   user = User.create(
     email: Faker::Internet.email,
-    password: '123lol',
-    password_confirmation: '123lol'
+    password: '123',
+    password_confirmation: '123'
   )
-  rand(1..5).times do
-    
+  rand(1..5).times do |i|
+    user.food_lists.create(created_at: Time.zone.now - i.day)
+  end
+
+  user.food_lists.each do |list|
+    list.update(current_water: rand(1..2), current_sleep: rand(1..6), current_sitting: rand(1..4))
+    rand(1..5).times do
+      list.food_list_items.create(food_id: rand(1..45))
+    end
   end
 end
