@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :foods, only: [:create, :index, :show]
     resources :food_list_items, only: [:create, :destroy]
     resources :food_lists, only: [:index]
+    resources :images, only: [:update]
   end
   root "static#home"
 end
