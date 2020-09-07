@@ -32,14 +32,18 @@ $ git checkout [branch name]
 ```
 - Install the dependencies:
 ```
+$ yarn install --check-files
+```
+```
 $ bundle
 ```
+- Migrate and Seed:
 ```
-$ npm install
+$ bundle db:migrate db:seed
 ```
 - Run the developer server: (this one is gonna be pretty important if you are running both front and backend, because by default rails and react try to use `localhost:3000`, so I configured the npm command to run this on `localhost:4000`)
 ```
-$ npm start
+$ yarn start
 ```
 
 And that's it. pretty easy uh?
